@@ -1,23 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
-
-  images: {
-    unoptimized: true,
-  },
-
   typescript: {
     ignoreBuildErrors: true,
   },
-
   eslint: {
     ignoreDuringBuilds: true,
   },
-
+  images: {
+    unoptimized: true,
+  },
   experimental: {
     serverComponentsExternalPackages: ['mongodb'],
   },
-
   webpack(config, { dev }) {
     if (dev) {
       config.watchOptions = {
@@ -28,12 +23,10 @@ const nextConfig = {
     }
     return config;
   },
-
   onDemandEntries: {
     maxInactiveAge: 10000,
     pagesBufferLength: 2,
   },
-
   async headers() {
     return [
       {
