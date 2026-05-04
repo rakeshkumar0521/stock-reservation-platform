@@ -6,13 +6,14 @@ const nextConfig = {
     unoptimized: true,
   },
 
+  // ✅ CRITICAL FIX
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 
- typescript: {
-  ignoreBuildErrors: true,
-},
-eslint: {
-  ignoreDuringBuilds: true,
-},
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 
   experimental: {
     serverComponentsExternalPackages: ['mongodb'],
