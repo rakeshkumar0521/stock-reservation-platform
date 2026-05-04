@@ -6,7 +6,6 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  // ✅ CRITICAL FIX
   typescript: {
     ignoreBuildErrors: true,
   },
